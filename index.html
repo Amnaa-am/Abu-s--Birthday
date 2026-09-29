@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Abdulla 🌌💜</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(126,87,255,.30),transparent 28%),
+    radial-gradient(circle at 85% 25%,rgba(55,120,255,.25),transparent 30%),
+    radial-gradient(circle at 50% 85%,rgba(175,70,255,.22),transparent 35%),
+    radial-gradient(circle at 70% 60%,rgba(70,90,255,.18),transparent 30%),
+    linear-gradient(135deg,#05051a,#0a0b2e 45%,#10052b);
+
+  color:#fff;
+  font-family:Arial,sans-serif;
+  overflow:hidden;
+}
+
+/* GALAXY GLOW */
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 70%,rgba(150,70,255,.10),transparent 25%),
+    radial-gradient(circle at 75% 15%,rgba(60,130,255,.10),transparent 25%);
+  pointer-events:none;
+}
+
+/* PAGES */
+
+.page{
+  display:none;
+  min-height:100vh;
+  width:100%;
+  padding:70px 20px 30px;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+.page.active{
+  display:flex;
+}
+
+.content{
+  width:100%;
+  max-width:850px;
+  z-index:2;
+}
+
+/* HEADINGS */
+
+h1,h2{
+  font-family:Georgia,serif;
+}
+
+h1{
+  font-size:clamp(3rem,10vw,6rem);
+  text-shadow:
+    0 0 10px #9d8cff,
+    0 0 25px #765cff,
+    0 0 45px rgba(100,80,255,.7);
+}
+
+h2{
+  font-size:clamp(2rem,7vw,4rem);
+  margin-bottom:15px;
+  text-shadow:
+    0 0 10px #8e7cff,
+    0 0 25px rgba(80,100,255,.6);
+}
+
+.subtitle{
+  color:#c8c8ee;
+  line-height:1.8;
+}
+
+.silver{
+  color:#d8d8ff;
+  letter-spacing:3px;
+  text-shadow:0 0 10px rgba(150,150,255,.7);
+}
+
+/* BUTTONS */
+
+button{
+  border:1px solid rgba(170,160,255,.7);
+  background:
+    linear-gradient(145deg,rgba(34,28,85,.95),rgba(62,45,130,.9));
+
+  color:white;
+  padding:13px 28px;
+  border-radius:30px;
+  cursor:pointer;
+  margin-top:25px;
+
+  box-shadow:
+    0 0 12px rgba(110,90,255,.35),
+    inset 0 0 10px rgba(255,255,255,.08);
+
+  transition:.3s ease;
+}
+
+button:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 0 20px rgba(120,100,255,.7),
+    0 0 35px rgba(70,100,255,.35);
+}
+
+.back-button{
+  position:fixed;
+  top:18px;
+  left:18px;
+  margin:0;
+  padding:9px 17px;
+  z-index:10;
+}
+
+/* GIFT */
+
+.gift{
+  width:190px;
+  height:175px;
+  margin:0 auto 30px;
+  position:relative;
+
+  animation:float 2.5s infinite;
+
+  filter:
+    drop-shadow(0 0 15px rgba(110,90,255,.55))
+    drop-shadow(0 0 30px rgba(70,100,255,.25));
+}
+
+.gift-box{
+  position:absolute;
+  left:18px;
+  bottom:0;
+  width:154px;
+  height:105px;
+
+  border-radius:0 0 7px 7px;
+
+  background:
+    radial-gradient(circle at 25% 20%,rgba(255,255,255,.14),transparent 25%),
+    radial-gradient(circle at 80% 70%,rgba(100,80,255,.25),transparent 30%),
+    linear-gradient(145deg,#29205a,#100d32 60%,#07071c);
+
+  border:1px solid rgba(180,170,255,.7);
+
+  box-shadow:
+    inset 0 0 20px rgba(150,130,255,.12),
+    0 0 25px rgba(100,80,255,.3);
+
+  overflow:hidden;
+}
+
+.gift-box:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+
+  width:30px;
+  height:100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6556b8,
+      #b8b4ff,
+      #eeeaff,
+      #7569c9
+    );
+
+  box-shadow:0 0 15px rgba(150,140,255,.4);
+}
+
+.gift-lid{
+  position:absolute;
+  left:8px;
+  top:52px;
+
+  width:174px;
+  height:42px;
+
+  border-radius:9px;
+
+  background:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.14),transparent 20%),
+    radial-gradient(circle at 80% 70%,rgba(100,80,255,.2),transparent 25%),
+    linear-gradient(145deg,#34286e,#141039 65%,#08071e);
+
+  border:1px solid rgba(190,180,255,.7);
+
+  z-index:2;
+
+  box-shadow:
+    0 5px 15px rgba(0,0,0,.45),
+    0 0 20px rgba(110,90,255,.3);
+}
+
+.gift-lid:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+
+  width:30px;
+  height:42px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6556b8,
+      #c0bbff,
+      #eeeaff,
+      #7569c9
+    );
+}
+
+.gift:after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+
+  width:30px;
+  height:63px;
+
+  transform:translateX(-50%);
+  border-radius:8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6556b8,
+      #c0bbff,
+      #eeeaff,
+      #7569c9
+    );
+
+  z-index:3;
+
+  box-shadow:0 0 18px rgba(150,130,255,.5);
+}
+
+.gift .bow-left,
+.gift .bow-right{
+  position:absolute;
+  top:2px;
+
+  width:66px;
+  height:48px;
+
+  border:10px solid #9d8cff;
+
+  z-index:4;
+
+  filter:
+    drop-shadow(0 0 6px rgba(120,100,255,.8));
+}
+
+.gift .bow-left{
+  left:28px;
+  border-right:0;
+  border-radius:55px 0 0 55px;
+  transform:rotate(-18deg);
+}
+
+.gift .bow-right{
+  right:28px;
+  border-left:0;
+  border-radius:0 55px 55px 0;
+  transform:rotate(18deg);
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-12px);
+  }
+}
+
+/* LETTER */
+
+.letter{
+  background:rgba(75,65,150,.16);
+
+  border:1px solid rgba(160,150,255,.45);
+
+  border-radius:18px;
+
+  padding:30px;
+
+  text-align:left;
+
+  max-height:60vh;
+  overflow:auto;
+
+  line-height:1.8;
+
+  box-shadow:
+    0 0 25px rgba(80,70,220,.18),
+    inset 0 0 25px rgba(150,130,255,.05);
+
+  backdrop-filter:blur(8px);
+}
+
+.signature{
+  margin-top:20px;
+
+  text-align:right;
+
+  font-family:Georgia,serif;
+
+  font-size:22px;
+
+  color:#d9d3ff;
+
+  text-shadow:0 0 10px rgba(140,120,255,.6);
+}
+
+/* PHOTO GALLERY */
+
+.gallery{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:15px;
+
+  max-height:65vh;
+
+  overflow:auto;
+
+  padding:8px;
+}
+
+.photo-card{
+  background:
+    linear-gradient(
+      145deg,
+      #eeeaff,
+      #cfc9f0
+    );
+
+  padding:7px 7px 14px;
+
+  color:#111;
+
+  border-radius:5px;
+
+  box-shadow:
+    0 0 12px rgba(130,110,255,.35);
+}
+
+.photo-card img{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  display:block;
+}
+
+.photo-card p{
+  font-size:13px;
+  margin-top:7px;
+}
+
+/* STARS */
+
+.star{
+  position:fixed;
+
+  width:2px;
+  height:2px;
+
+  background:#fff;
+
+  border-radius:50%;
+
+  box-shadow:
+    0 0 6px #fff,
+    0 0 12px #9d8cff,
+    0 0 18px #6f8cff;
+
+  animation:twinkle 2s infinite alternate;
+
+  pointer-events:none;
+}
+
+@keyframes twinkle{
+  to{
+    opacity:1;
+    transform:scale(1.6);
+  }
+}
+
+/* FINAL MESSAGE */
+
+.final-message{
+  font-size:clamp(2rem,6vw,4rem);
+
+  line-height:1.25;
+
+  text-shadow:
+    0 0 12px rgba(140,120,255,.8),
+    0 0 30px rgba(70,90,255,.4);
+}
+
+.final-small{
+  margin-top:20px;
+  color:#cccdf2;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+  }
+
+  .letter{
+    padding:22px;
+    font-size:14px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<section class="page active" id="page1">
+
+  <div class="content">
+
+    <div class="gift">
+
+      <div class="bow-left"></div>
+      <div class="bow-right"></div>
+
+      <div class="gift-lid"></div>
+
+      <div class="gift-box"></div>
+
+    </div>
+
+    <h1>Friendyy🖤✨</h1>
+
+    <p class="subtitle">
+      I made a little something for you...
+    </p>
+
+    <button onclick="nextPage()">
+      Open Your Surprise ✨
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 2 -->
+
+<section class="page" id="page2">
+
+  <button class="back-button" onclick="previousPage()">
+    ← Back
+  </button>
+
+  <div class="content">
+
+    <p class="silver">
+      A LIL SURPRISE FOR YOU
+    </p>
+
+    <h2>
+      Happy Birthdayy Abdulla🖤✨
+    </h2>
+
+    <p class="subtitle">
+      Today is all about celebrating you...
+      and yes, you have to tolerate me too 😂
+    </p>
+
+    <button onclick="nextPage()">
+      Continue 🖤
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+
+<section class="page" id="page3">
+
+  <button class="back-button" onclick="previousPage()">
+    ← Back
+  </button>
+
+  <div class="content">
+
+    <p class="silver">
+      WAIT... THERE'S MORE 👀
+    </p>
+
+    <div style="font-size:100px">
+      🎁
+    </div>
+
+    <h2>
+      One More Thing...
+    </h2>
+
+    <p class="subtitle">
+      Open this little gift and keep going✨
+    </p>
+
+    <button onclick="nextPage()">
+      Open It 🤍
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 4 -->
+
+<section class="page" id="page4">
+
+  <button class="back-button" onclick="previousPage()">
+    ← Back
+  </button>
+
+  <div class="content">
+
+    <h2>
+      Just A Little Letter For You 🖤
+    </h2>
+
+    <div class="letter">
+
+      <p id="typedMessage"></p>
+
+      <div
+        class="signature"
+        id="signature"
+        style="
+          opacity:0;
+          transform:translateY(8px);
+          transition:opacity .8s ease, transform .8s ease;
+        "
+      >
+        Your forever headache😂🤌🏻
+      </div>
+
+    </div>
+
+    <button onclick="nextPage()">
+      A Few Of You 🖤
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 5 -->
+
+<section class="page" id="page5">
+
+  <button class="back-button" onclick="previousPage()">
+    ← Back
+  </button>
+
+  <div class="content">
+
+    <h2>
+      A Few Of You 🖤
+    </h2>
+
+    <p class="subtitle">
+      Just some of your random moments 😂✨
+    </p>
+
+    <div class="gallery">
+
+      <div class="photo-card">
+        <img src="photo1.jpg" alt="Photo 1">
+        <p>Looking good🤌🏻✨</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo2.jpg" alt="Photo 2">
+        <p>Main character energy 😌✨</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo3.jpg" alt="Photo 3">
+        <p>Okayyy, model! 😂🤍</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo4.jpg" alt="Photo 4">
+        <p>POV: He thinks he’s a racer now 😭🏍️</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo5.jpg" alt="Photo 5">
+        <p>The pose says it all 😂❤️</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo6.jpg" alt="Photo 6">
+        <p>Still the same..... just slightly suspicious 😂🕷️</p>
+      </div>
+
+      <div class="photo-card">
+        <img src="photo7.jpg" alt="Photo 7">
+        <p>Why do you actually look like this? 😭😂</p>
+      </div>
+
+    </div>
+
+    <button onclick="nextPage()">
+      One Last Thing 🖤
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- PAGE 6 -->
+
+<section class="page" id="page6">
+
+  <button class="back-button" onclick="previousPage()">
+    ← Back
+  </button>
+
+  <div class="content">
+
+    <p class="silver">
+      AND FINALLY...
+    </p>
+
+    <div class="final-message">
+
+      Once again,<br>
+
+      Happy Birthday to my favourite idiot😌🫶🏻
+
+    </div>
+
+    <p class="final-small">
+      Stay happy, stayyy blessed, and never change✨
+    </p>
+
+    <div class="signature">
+      Your Mu😁🖤
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+
+let currentPage = 1;
+
+let typingStarted = false;
+
+
+/* NEXT PAGE */
+
+function nextPage(){
+
+  if(currentPage >= 6){
+    return;
+  }
+
+  document
+    .getElementById("page" + currentPage)
+    .classList
+    .remove("active");
+
+  currentPage++;
+
+  document
+    .getElementById("page" + currentPage)
+    .classList
+    .add("active");
+
+
+  if(currentPage === 4 && !typingStarted){
+
+    typingStarted = true;
+
+    startTyping();
+
+  }
+
+}
+
+
+/* PREVIOUS PAGE */
+
+function previousPage(){
+
+  if(currentPage <= 1){
+    return;
+  }
+
+  document
+    .getElementById("page" + currentPage)
+    .classList
+    .remove("active");
+
+  currentPage--;
+
+  document
+    .getElementById("page" + currentPage)
+    .classList
+    .add("active");
+
+}
+
+
+/* BIRTHDAY LETTER */
+
+const message = `Happyy Birthdayyy Abu🖤✨
+
+Honestly, I don't even know how to explain our friendship properly. You're not just a friend to me — you're one of those people who knows me way too well and somehow still chooses to stay 😂🤌🏻
+
+We understand each other without having to explain everything, and I can genuinely trust you with anything. I can be completely myself around you, whether I'm being serious, annoying, emotional, or just completely stupid 😂
+
+We've had so many random moments, silly conversations, inside jokes and memories that probably wouldn't make sense to anyone else. And honestly, those little things are what make our friendship so special 💗
+
+I'm really grateful to have someone like you in my life — someone I can count on, laugh with, and trust completely. You're more like family than just a friend, and I hope our friendship stays this crazy for a very, very long time 🖤
+
+May Allah bless you with happiness, success, good health and everything your heart wishes for. May He always protect you and guide you towards what is best for you 🤲🏻✨
+
+Stay the same annoying, funny and amazing person you are 👀🖤`;
+
+
+/* TYPING EFFECT */
+
+function startTyping(){
+
+  let i = 0;
+
+  const e = document.getElementById("typedMessage");
+
+  const signature = document.getElementById("signature");
+
+
+  if(signature){
+
+    signature.style.opacity = "0";
+
+    signature.style.transform = "translateY(10px)";
+
+  }
+
+
+  function type(){
+
+    if(i < message.length){
+
+      if(message[i] === "\n"){
+
+        e.innerHTML += "<br>";
+
+      }else{
+
+        e.innerHTML += message[i];
+
+      }
+
+      i++;
+
+      setTimeout(type,18);
+
+    }
+
+    else{
+
+      setTimeout(()=>{
+
+        if(signature){
+
+          signature.style.opacity = "1";
+
+          signature.style.transform = "translateY(0)";
+
+        }
+
+      },500);
+
+    }
+
+  }
+
+  type();
+
+}
+
+
+/* GALAXY STARS */
+
+for(let i = 0; i < 100; i++){
+
+  let s = document.createElement("div");
+
+  s.className = "star";
+
+  s.style.left =
+    Math.random() * 100 + "vw";
+
+  s.style.top =
+    Math.random() * 100 + "vh";
+
+  s.style.animationDelay =
+    Math.random() * 2 + "s";
+
+  s.style.animationDuration =
+    (1 + Math.random() * 3) + "s";
+
+  document.body.appendChild(s);
+
+}
+
+</script>
+
+</body>
+</html>
